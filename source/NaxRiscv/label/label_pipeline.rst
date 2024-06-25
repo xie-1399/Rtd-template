@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-MMU
+标签化流水线
 ============================
 
 The L2 cache has the following characteristics :

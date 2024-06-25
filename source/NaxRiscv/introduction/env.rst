@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-How to use
+环境变量
 ================
 
 There are currently two ways to try NaxRiscv :

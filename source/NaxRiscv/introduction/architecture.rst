@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-Pipeline
+整体架构
 ==========
 
 NaxRiscv is composed of multiple pipelines :

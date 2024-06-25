@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-Hardware description
+项目目录
 ============================
 
 NaxRiscv was designed using SpinalHDL (a Scala hardware description library).

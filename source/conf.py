@@ -19,12 +19,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'NaxRiscv'
-copyright = '2022, Spaghetti god'
-author = 'Spinal'
+project = ''
+copyright = '2024, 北京微芯研究院'
+author = ''
 
 # The short X.Y version
-version = ''
+version = '1'
 # The full version, including alpha/beta/rc tags
 release = ''
 
@@ -42,6 +42,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinxcontrib.wavedrom',
     'sphinx.ext.imgconverter',
+    'recommonmark',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

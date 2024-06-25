@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-Load store unite
+外设隔离
 ============================
 
 The LSU implementation is characterised by :

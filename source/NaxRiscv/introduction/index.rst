@@ -1,12 +1,13 @@
 ===============
-Introduction
+项目介绍
 ===============
 
-.. include:: naxriscv.rst
-.. include:: pipeline.rst
-.. include:: howtouse.rst
-.. include:: hardware_description.rst
-.. include:: acknowledgment.rst
+.. include:: architecture.rst
+.. include:: project.rst
+.. include:: dependency.rst
+.. include:: env.rst
+
+
 
 .. role:: raw-html-m2r(raw)
    :format: html

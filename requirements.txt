@@ -2,3 +2,4 @@ sphinx==5.1.1
 sphinx-rtd-theme==0.5.2
 sphinxcontrib-wavedrom==3.0.1
 sphinx-multiversion==0.2.4
+recommonmark==0.7.1

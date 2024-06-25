@@ -1,15 +1,11 @@
 ===============
-Memory system
+访存子系统
 ===============
+.. include::  mmu.rst
+.. include::  lsu.rst
+.. include::  tcm.rst
+.. include::  cache.rst
 
-..
-  .. toctree::
-     Lsu
-     
-.. include:: lsu2.rst
-.. include:: mmu.rst
-.. include:: coherency.rst
-.. include:: l2.rst
 
 .. role:: raw-html-m2r(raw)
    :format: html

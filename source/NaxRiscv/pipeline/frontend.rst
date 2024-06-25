@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-Dispatch / Issue
+前端
 ============================
 
 Here are a few specific points about the current implementation :

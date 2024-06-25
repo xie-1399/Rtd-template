@@ -8,14 +8,11 @@
    :maxdepth: 2
 
    NaxRiscv/introduction/index
-   NaxRiscv/frontend/index
-   NaxRiscv/execution_units/index
-   NaxRiscv/memory/index
-   NaxRiscv/branch_prediction/index
-   NaxRiscv/backend/index
    NaxRiscv/simulation/index
+   NaxRiscv/pipeline/index
+   NaxRiscv/memory/index
+   NaxRiscv/label/index
+   NaxRiscv/mapping/index
+   NaxRiscv/soc/index
    NaxRiscv/performance/index
-   NaxRiscv/abstraction/index
-   NaxRiscv/misc/index
-   NaxRiscv/hardware/index
 
