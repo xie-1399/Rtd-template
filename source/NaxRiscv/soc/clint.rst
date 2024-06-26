@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-标签化Clint
+标签化Clint（周语骞）
 ========================
 
 NaxRiscv implements the RISCV External Debug Support v. 0.13.2 specification via JTAG. This enables upstream openocd support,

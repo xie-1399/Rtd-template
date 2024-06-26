@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-缓存隔离
+缓存隔离（郑帅）
 ============================
 
 The LSU implementation is characterised by :

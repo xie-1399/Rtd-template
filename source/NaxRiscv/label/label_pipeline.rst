@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-标签化流水线
+标签化流水线（谢喜龙）
 ============================
 
 The L2 cache has the following characteristics :

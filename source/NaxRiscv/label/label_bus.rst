@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-总线隔离
+总线隔离（周语骞）
 ============================
 
 The LSU implementation is characterised by :

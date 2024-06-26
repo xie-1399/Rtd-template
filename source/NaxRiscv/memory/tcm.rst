@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-紧耦合存储
+紧耦合存储（谢喜龙）
 ============================
 
 The L2 cache has the following characteristics :

@@ -1,7 +1,7 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
-标签化TLB
+标签化TLB（谢喜龙）
 ============================
 
 The MMU implementation is characterised by :

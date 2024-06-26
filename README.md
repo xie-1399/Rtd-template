@@ -17,8 +17,11 @@ sphinx-autobuild
 #### compile the doc
 
    make html     # for html
+   
    make latex    # for latex
+   
    make latexpdf # for latex (will require latexpdf installed)
+   
    make          # list all the available output format
 
 Running on the host local:
