@@ -19,12 +19,11 @@
 
 # -- Project information -----------------------------------------------------
 
-project = ''
-copyright = '2024, 北京微芯研究院'
-author = ''
-
+project = 'Tagged RISC-V '
+copyright = '2024, 未来区块链与隐私计算高精尖创新中心、北京航空航天大学'
+author = 'BUAA'
 # The short X.Y version
-version = '1'
+version = 'V1.0'
 # The full version, including alpha/beta/rc tags
 release = ''
 
@@ -62,7 +61,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'zh-CN'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -107,7 +106,7 @@ html_favicon = 'asset/logo/logo3_32x32.png'
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'NaxRiscvdoc'
+htmlhelp_basename = 'Tagged RISC-V doc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -134,7 +133,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'NaxRiscv.tex', 'NaxRiscv Documentation',
+    (master_doc, 'TaggedRiscv.tex', 'TaggedRiscv Documentation',
      'penis', 'manual'),
 ]
 
@@ -144,7 +143,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'NaxRiscv', 'NaxRiscv Documentation',
+    (master_doc, 'TaggedRiscv', 'TaggedRiscv Documentation',
      [author], 1)
 ]
 
@@ -155,7 +154,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'NaxRiscv', 'NaxRiscv Documentation',
+    (master_doc, 'TaggedRiscv', 'TaggedRiscv Documentation',
      author, 'SpinalHDL', 'One line description of project.',
      'Miscellaneous'),
 ]
