@@ -61,7 +61,8 @@ SBT 版本： 1.4.7，安装方式如下：
     maven-central: https://repo1.maven.org/maven2/
     sbt-plugin-repo: https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
 
-安装成功后，通过sbt sbtVersion 查看版本号
+安装成功后，通过sbt sbtVersion 查看版本号。
+
 
 Verilator or VCS
 ^^^^^^^^^^^^^^

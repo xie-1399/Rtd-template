@@ -100,7 +100,7 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
-html_favicon = 'asset/logo/logo3_32x32.png'
+html_favicon = 'asset/image/logo.png'
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
