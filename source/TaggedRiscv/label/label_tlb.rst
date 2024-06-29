@@ -6,14 +6,14 @@
 
 TaggedRiscv支持SV39规范，采用了二级TLB结构。
 
-- **一级TLB：** 一级TLB采用四路组相联，大小为4 KB。
+    - **一级TLB：** 一级TLB采用四路组相联，大小为4 KB。
 \
 
-- **二级TLB：** 二级TLB采用二路组相联，大小为4 MB。
+    - **二级TLB：** 二级TLB采用二路组相联，大小为4 MB。
 
 TLB表项如下图所示：
 
-    .. image:: /asset/image/TLB.png
+    .. image:: /asset/image/TLB_new.png
       :align: center
 
 
