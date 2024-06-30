@@ -8,7 +8,7 @@
 
 ::
 
-    |-- TaggedRiscv
+    |-- TaggedRISCV
         |-- .gitignore
         |-- .README.md  //开发文档
         |-- .ext   //测试与基准程序
@@ -20,3 +20,7 @@
                 |-- scala  //硬件仿真代码
         |-- .build.sbt // sbt项目构建
         |-- .test //仿真生成文件，如波形，verilog等
+
+.. image:: /asset/image/parter_new.png
+    :align: center
+    :scale: 75%

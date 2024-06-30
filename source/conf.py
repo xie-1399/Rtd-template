@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Tagged RISC-V '
+project = 'Tagged RISCV '
 copyright = '2024, 未来区块链与隐私计算高精尖创新中心、北京航空航天大学'
 author = 'BUAA'
 # The short X.Y version
@@ -100,7 +100,7 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
-html_favicon = 'asset/image/logo.png'
+html_favicon = 'asset/image/logo_new.png'
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

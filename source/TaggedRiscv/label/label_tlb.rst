@@ -4,7 +4,7 @@
 标签化TLB
 ============================
 
-TaggedRiscv支持SV39规范，采用了二级TLB结构。
+TaggedRISCV支持SV39规范，采用了二级TLB结构。
 
     - **一级TLB：** 一级TLB采用四路组相联，大小为4 KB。
 \

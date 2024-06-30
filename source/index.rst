@@ -18,5 +18,6 @@
    TaggedRiscv/mapping/index
    TaggedRiscv/soc/index
    TaggedRiscv/performance/index
+   TaggedRiscv/jtag/index
    TaggedRiscv/thanks/index
 
