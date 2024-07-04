@@ -24,13 +24,13 @@
    :linenos:
    :caption: 标签化流水线
 
-   # privilegedPlugin.scala
+   // privilegedPlugin.scala
       val label = new Area {
          val mark = RegInit(U(0,p.labelWidth bits)) # 定义标签寄存器
       }
       csr.readCheckWrite(CSR.LABEL, readlabel === 0, 0 -> label.mark)  # 增加流水线标签，并且只有标签在0时才可进行CSR的读写
 
-   # lsu2Plugin.scala
+   // lsu2Plugin.scala
       val cmd = setup.cacheLoad.cmd
       cmd.currentlabel     := setup.priv.setup.label # 标签通过lsu单元送往Cache
       val currentLabel = setup.priv.setup.label
