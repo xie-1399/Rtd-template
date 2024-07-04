@@ -18,7 +18,7 @@ JDK环境变量
     # 使用source命令重新读取并执行profile中的配置信息
     source /etc/profile
     # 测试,执行如下命令查看JDK版本，如果返回当前JDK版本信息则说明安装成功
-    java -verson
+    java -version
 
 
 
@@ -26,7 +26,7 @@ Scala环境变量
 ^^^^^^^^^^^^^^
 ::
 
-    export SCALA_HOME=/usr/local/scala
+    export SCALA_HOME=/usr/local/scala-2.11.12
     export PATH=$SCALA_HOME/bin:$PATH
     Source ~/.bashrc
-    Scala -version
+    scala -version

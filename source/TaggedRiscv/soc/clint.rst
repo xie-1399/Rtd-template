@@ -8,3 +8,24 @@
 \
 
     - **标签时间片中断** ： 用于给标签时间片定时的中断，标签时间片结束时发出定时中断，时间片长度由管理程序配置，其他标签可以通过写入寄存器提前结束时间片。
+
+    .. code-block:: scala
+       :linenos:
+       :caption: 标签化隔离
+
+        val harts = for (index <- 0 until hartCount) yield new Area {
+          val cmp = Reg(UInt(64 bits)) init U(0x7FFFFFFF)
+          val timerInterrupt = RegNext(time >= cmp)
+          val softwareInterrupt = RegInit(False)
+        }
+
+    .. code-block:: scala
+       :linenos:
+       :caption: 标签时间片中断
+
+        val switch = new Area {
+          val label = io.apb.PADDR(34 downto 32)
+          val cmp = Reg(UInt(64 bits)) init U(0x7FFFFFFF)
+          val avant = RegInit(False)
+          val timerInterrupt = RegNext(time >= cmp || avant)
+        }

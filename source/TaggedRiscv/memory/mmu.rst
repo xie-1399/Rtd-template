@@ -12,3 +12,52 @@ MMU
     - **缓存直接命中** ： 允许ICache直接针对TLB检查其路组tag，可以显著改善时序。
 \
     - **标签化** ： MMU发出的Refill请求携带当前处理器正在执行的标签并在Cache中进行标签的比对，来自内存保护单元及外设隔离单元所产生的越权访问交由LSU进行处理，并交由异常处理单元触发非法访问异常。
+
+    .. code-block:: scala
+       :linenos:
+       :caption: SV39规范
+
+        val sv39 = MmuSpec(
+          //三级页表
+          levels     = List(
+            MmuLevel(virtualWidth = 9, physicalWidth = 9 , virtualOffset =  12, physicalOffset = 12, entryOffset =  10),
+            MmuLevel(virtualWidth = 9, physicalWidth = 9 , virtualOffset =  21, physicalOffset = 21, entryOffset =  19),
+            MmuLevel(virtualWidth = 9, physicalWidth = 26, virtualOffset =  30, physicalOffset = 30, entryOffset =  28)
+          ),
+          entryBytes = 8,
+          virtualWidth   = 39,
+          physicalWidth  = 56,
+          satpMode   = 8
+        )
+
+    .. code-block:: scala
+       :linenos:
+       :caption: 二级TLB结构
+
+       val translationStorageParameter = MmuStorageParameter(
+        levels   = List(
+          MmuStorageLevel(
+            id    = 0,
+            ways  = 4,
+            depth = 32
+          ),
+          MmuStorageLevel(
+            id    = 1,
+            ways  = 2,
+            depth = 32
+          )
+        ),
+        priority = 1
+       )
+
+    .. code-block:: scala
+       :linenos:
+       :caption: Refill请求标签化
+
+       //Refill CacheLoadCmd
+        cmd.valid             := False
+        cmd.virtual           := address.resized
+        cmd.size              := U(log2Up(spec.entryBytes))
+        cmd.redoOnDataHazard  := True
+        cmd.unlocked          := False
+        cmd.currentlabel      := setup.priv.setup.label //标签

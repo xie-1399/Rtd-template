@@ -15,5 +15,12 @@
 \
  - **标签化**：LSU向Cache发出的Cache请求携带当前处理器正在执行的标签并在Cache中进行标签的比对，LSU对来自内存保护单元及外设隔离单元所产生的越权访问进行处理，交由标签越权管理模块触发非法访问异常。
 
+   .. code-block:: scala
+      :linenos:
+      :caption: 标签化LSU
 
+      # lsu2Plugin.scala
+         val cmd = setup.cacheLoad.cmd
+         cmd.currentlabel     := setup.priv.setup.label # 标签通过lsu单元送往Cache
+         val currentLabel = setup.priv.setup.label
 

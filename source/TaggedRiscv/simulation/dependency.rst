@@ -72,7 +72,7 @@ Verilator版本：4.2.6，安装方式如下:
 
     # Verilator (for sim only, really needs 3.9+, in general apt-get will give you 3.8)
     sudo apt-get install git make autoconf g++ flex bison
-    git clone http://git.veripool.org/git/verilator   # Only first time
+    git clone http://github.com/verilator/verilator.git   # Only first time
     unsetenv VERILATOR_ROOT  # For csh; ignore error if on bash
     unset VERILATOR_ROOT  # For bash
     cd verilator

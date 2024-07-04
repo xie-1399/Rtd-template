@@ -17,4 +17,70 @@ DMA支持AXI4总线上任意模块之间的数据突发传输，设计有双通�
 
     - **定时任务触发** ： 可以配置定时任务，每隔指定时间触发一次数据传输。定时任务有独立于通道任务的寄存器组，定时任务触发时选择空闲通道执行。
 
-.. image:: /asset/image/dma_arch.png
+    .. image:: /asset/image/dma_arch.png
+
+    .. code-block:: scala
+       :linenos:
+       :caption: 跨页任务分解
+
+       //根据地址边界自动划分
+        val thisLength = Min(
+          abortLength - cmdedLength,
+          ~virAddress(0, 12 bits) +^ U(1), //距离地址边界的长度
+          (burstMlen +^ U(1)) << burstSize
+        )
+
+    .. code-block:: scala
+       :linenos:
+       :caption: 主动地址翻译
+
+       //DMA使用MMU地址翻译接口
+        io.trans.cmd.valid := requests.orR
+        io.trans.cmd.virtual := virtuals(chosen)
+       //MMU地址翻译接口
+        val rsp = translation.newTranslationPort(
+          stages = stages,
+          preAddress = VIRTUAL,
+          allowRefill = null,
+          usage = LOAD_STORE,
+          portSpec = port,
+          storageSpec = storage
+        )
+
+    .. code-block:: scala
+       :linenos:
+       :caption: 标签化隔离
+
+       //当前标签
+        label := io.apb.PADDR(apb.addressWidth - labelWidth, labelWidth bits)
+       //标签独享寄存器组
+        val tasks = Seq.fill(channelCount, labelCount)(Task(withTimer = false))
+       //标签切换暂停当前任务
+        when(valid & normal & label =/= user) {
+          read.abortLength := Max(read.cmdedLength, write.cmdedLength)
+          write.abortLength := Max(read.cmdedLength, write.cmdedLength)
+        }
+
+    .. code-block:: scala
+       :linenos:
+       :caption: 定时任务触发
+
+       val tasks = Seq.fill(labelCount)(Task(withTimer = true))
+       //定时触发逻辑
+       val enable = if (withTimer) Reg(Bool()) init False else null
+       val time = if (withTimer) Reg(UInt(timerWidth bits)) init U(0) else null
+       val counter = if (withTimer) Reg(UInt(timerWidth bits)) init U(0) else null
+       if (withTimer) {
+         when(enable & !valid) {
+           counter := counter + U(1)
+         }
+         when((counter === time) & enable) {
+           valid := True
+         }
+         when(valid || !enable) {
+           counter := U(0)
+         }
+         when(time =/= RegNext(time)) {
+           enable.clear()
+         }
+       }
